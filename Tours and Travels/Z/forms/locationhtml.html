@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head> 
+<title>TOURS AND TRAVELS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+  </head>
+    <body>
+      <body>
+<div>
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+     
+      <div id="logo" class="fl_left">
+        <h1><a href="z1.html">TRAVELERS POINT</a></h1>
+      </div>
+      
+ 
+    </header>
+  </div>
+     <form id="locform" action="locationphp.php" method="get">
+         
+      <div class="login-box">
+        
+            <h1 id="tr">Traveling Location</h1>
+
+             
+              
+
+          
+                <table>
+
+                  <tr>
+                    <td>
+                      <label id="Lci">Contact</label>
+                    </td>
+                    <td>
+                      <input type="text" id="LContact" name="LContact" placeholder="Enter Contact">
+                    </td>
+                  </tr>
+                 
+                  <tr>
+                    <td>
+                      <label id="Lci">Recieve me from</label>
+                    </td>
+                    <td>
+                      <input type="text" id="RecieveFrom" name="RecieveFrom" placeholder="Enter Location">
+                    </td>
+                  </tr>
+                
+             
+                  <tr>
+                    <td>
+                      <label id="ln">Recieve me By</label>
+                    </td>
+                    <td>
+                      <input type="text" id= "RecieveBy" name="RecieveBy" placeholder="Simple Car/Ac Car">
+                    </td>
+                  </tr>
+                
+              
+            
+              
+            </table>
+          
+              
+             
+          
+              <input type="submit" id="Lnx" name="Next" value="Next" onclick=" return validate()">
+             
+            
+      </div>
+     </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+   
+   <script type="text/javascript">
+      
+       function validate()
+        {
+            
+            var Lname=document.getElementById('Lname').value;
+            var Lcity=document.getElementById('Lcity').value;
+           
+           
+            if(Lname.length<1)
+            {
+              
+              alert("Location name Is Required!!");
+              return false;
+            }
+           
+             if(Lcity.length<1)
+            {
+                     
+              alert("City Is Required!!");
+              return false;
+            }
+           
+        
+     </script>

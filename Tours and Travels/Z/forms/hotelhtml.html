@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+<title>TOURS AND TRAVELS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    <body>
+     <form id="hotform" action="hotelphp.php" method="get">
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="z1.html">logout</a></li>
+        </ul>
+      </nav>
+      <div class="login-box">
+        
+                    <h1 id="ho">Hotel Booking</h1>
+
+            <p>
+            <table>
+              <tr>
+                <td>
+                  <div class="clear"></div>
+                  <strong>Contact</strong>
+                  <label class="text">
+                </td>
+                <td>
+                  <input type="text" name="HContact" placeHolder="noted on reception">
+                  </label>
+                </td>
+              </tr>
+            </table>
+          </p>
+            
+            <p>
+            <table>
+              <tr>
+                <td>
+                  <div class="clear"></div>
+                  <strong>Check-in</strong>
+                  <label class="tmDatepicker">
+                </td>
+                <td>
+                  <input type="text" name="Checkin" placeHolder='2018/04/30' data-constraints="@NotEmpty @Required @Date">
+                  </label>
+                </td>
+              </tr>
+            </table>
+          </p>
+          <p>
+            <table>
+              <tr>
+                <td>
+                  <div class="clear"></div>
+                  <strong>Check-out</strong>
+                  <label class="tmDatepicker">
+                </td>
+                <td>
+                  <input type="text" name="Checkout" placeHolder='2018/05/1' data-constraints="@NotEmpty @Required @Date">
+                  </label>
+                </td>
+              </tr>
+            </table>
+          </p>
+
+            <p>
+              <table>
+                <tr>
+                  <td>
+                    <div class="clear"></div>
+                    <div class="fl1 fl2">
+                    <em>Adults</em>
+                      <select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </td>
+                  <td>
+                    <div class="clear"></div>
+                    <em>Rooms</em>
+                    <select name="Room" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="fl1 fl2">
+                    <em>Children</em>
+                    <select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </p>
+            <p>
+              <table>
+                <tr>
+                  <td>
+                    <label id="si">Single Room</label>
+                  </td>
+                  <td>
+                    <input type="text" id="SRoom" name="SRoom" placeholder="Numeric">
+                  </td>
+                </tr>
+              </table>
+            </p>
+            <p>
+              <table>
+                <tr>
+                  <td>
+                    <label id="do">Double Room</label>
+                  </td>
+                  <td>
+                    <input type="text" id="DRoom" name="DRoom" placeholder="Numeric">
+                  </td>
+                </tr>
+              </table>
+            </p>
+           
+                  <p>
+                     <label for="inputComment">Requirement:<sup>*</sup>
+                     </label>
+                    <textarea name="Requirement" id="Requirement" rows="5" cols="30">
+                    </textarea>
+                  </p>
+            
+           
+              <input type="submit" id="Hnx" name="Book" value="Book" align="center" onclick=" return validate()">
+            
+            
+      </div>
+     </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+   
+   <script type="text/javascript">
+      
+       function validate()
+        {
+            
+            var Hname=document.getElementById('Hname').value;
+           
+            var Night=document.getElementById('Night').value;
+            var SRoom=document.getElementById('SRoom').value;
+            var DRoom=document.getElementById('DRoom').value;
+            
+            var Rating=document.getElementById('Rating').value;
+            var Requirement=document.getElementById('Requirement').value;
+
+           
+            if(Hname.length<1)
+                       {
+              
+              alert("Hotel name Is Required!!");
+              return false;
+            }
+                 
+             if(Night.length<1)
+            {
+                       
+              alert("Enter the Nights you want to stay !!");
+              return false;
+            }
+                  if(SRoom.length<1)
+                       {
+             
+              alert("Room specification Is Required!!");
+              return false;
+            }
+                  if(DRoom.length<1)
+                       {
+              
+              alert("Room specification Is Required!!");
+              return false;
+            }
+                
+             if(Rating.length<1)
+            {
+                      
+              alert("Rating is Required !!");
+              return false;
+            }
+                     if(Rating.length!=5 && Mobile.length!=6)
+            {
+              alert("Enter Numeric value in Rating.!!");
+              return false;
+            }
+            if(isNaN(Mobile))
+            {  
+
+               alert("Only Enter Numeric Values");
+               return false;              
+            }
+             return true;
+        }
+           
+        
+     </script>

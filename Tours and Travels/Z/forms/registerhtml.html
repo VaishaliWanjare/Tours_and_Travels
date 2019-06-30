@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<title>TOURS AND TRAVELS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+    
+
+<body>
+ <article> 
+<div>
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+     
+      <div id="logo" class="fl_left">
+        <h1><a href="z1.html">TRAVELERS POINT</a></h1>
+      </div>
+      
+    </header>
+  </div>
+     
+      <div class="login-box" align="center">
+        <h1 id="rg">Registration Form</h1>
+     <form id="regform" action="registerphp.php" method="get">
+
+           <table>
+                <P>
+                <tr>
+                  <td>
+                    <label id="us">Username</label>
+                  </td>
+                  <td>  
+                    <input type="text" id= "Username" name="Username" placeholder="Enter Username">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+              
+                <tr>
+                  <td>
+                    <label id="cn">Contact No</label>
+                  </td>
+                  <td> 
+                    <input type="text" id="Contact" name="Contact" placeholder="Enter Mobile">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+              
+                <tr>
+                  <td>
+                    <label id="em">Email</label>
+                  </td>
+                  <td>
+                    <input type="text" id="Email" name="Email" placeholder="Enter Email Address">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+              
+                <tr>
+                  <td>
+                    <label id="ad">Address</label>
+                  </td>
+                  <td>
+                    <input type="text" id="Address" name="Address" placeholder="Enter Address">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+              
+                <tr>
+                  <td>
+                    <label id="ci">City</label>
+                  </td>
+                  <td>
+                    <input type="text" id="City" name="City" placeholder="Enter City">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+              
+                <tr>
+                  <td>
+                    <label id="ps">Password</label>
+                  </td>
+                  <td>
+                    <input type="password" id="Password" name="Password" placeholder="Enter Password">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+              
+                <tr>
+                  <td>
+                    <label id="cp">Confirm Password</label>
+                  </td>
+                  <td>
+                    <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password">
+                  </td>
+                </tr>
+              
+            </p>
+          </table>
+            
+
+            
+            <a href="../forms/locationhtml.html">
+          <input type="submit" id="Lnx" name="Register" value="Register" onclick=" return validate()">
+              </a>
+            
+           
+        
+            
+      </div>
+     </form>
+   </div>
+ </article>
+    </body>
+</html>
+
+
+
+
+
+
+
+   
+   <script type="text/javascript">
+      
+       function validate()
+        {
+            
+            var Username=document.getElementById('Username').value;
+            var Contact=document.getElementById('Contact').value;
+            var Email=document.getElementById('Email').value;
+            var Address=document.getElementById('Address').value;
+            var City=document.getElementById('City').value;
+            var Password=document.getElementById('Password').value;
+            var ConfirmPassword=document.getElementById('ConfirmPassword').value;
+            
+
+            if(Username.length<1)
+            {
+              Username.style.border="1px solid red";
+              alert("Username Is Required!!");
+              return false;
+            }
+            if(Contact.length<1)
+            {   
+                      
+                alert("Mobile Is Required!!");
+                return false;
+            }
+           
+            
+            if(Email.length<1)
+            {
+                             
+                alert("Email Is Required!!");
+                return false;
+            }
+            if(Address.length<1)
+            { 
+                           
+              alert("Address Is Required!!");
+              return false;
+            }
+             if(City.length<1)
+            {
+                        
+              alert("City Is Required!!");
+              return false;
+            }
+            if(Password.length<1)
+            {
+              
+              alert("Password Is Required!!");
+              return false;
+            }
+            if(ConfirmPassword.length<1)
+            {
+              alert("ConfirmPassword Is Required!!");
+              return false;
+            }
+            if(Password!=ConfirmPassword)
+            {
+                alert("Passwords should match!!");
+                return false;             
+            }
+            if(Mobile.length!=10 && Mobile.length!=11)
+            {
+              alert("Enter Numeric value in Mobile no.!!");
+              return false;
+            }
+            if(isNaN(Mobile))
+            {  
+
+               alert("Only Enter Numeric Values");
+               return false;              
+            }
+             return true;
+        }
+        
+     </script>
+
+     

@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>  <link href="/htdocs/finalwork/hotelcss.css" rel="stylesheet" type="text/css" />
+  </head>
+    <body>
+     <form id="hotform" action="hotelphp.php" method="get">
+      <div class="login-box">
+        
+                    <h1 id="ho">Hotel Booking</h1>
+
+            
+            <p>
+              <table>
+                <tr>
+                  <td>
+                   <label id="hn">Hotel Name</label>
+                  </td>
+                  <td>
+                    <input type="text" id= "Hname" name="Hname" placeholder="Enter Hotel name">
+                  </td>
+                </tr>
+              </table>
+            </p>
+           
+          <p>
+            <table>
+              <tr>
+                <td>
+                  <label id="da">No of Nights</label>
+                </td>
+                <td>
+                  <input type="text" id="Night" name="Night" placeholder="Enter no of Nights">
+                </td>
+              </tr>
+            </table>
+          </p>
+            <p>
+              <table>
+                <tr>
+                  <td>
+                    <label id="si">Single Room</label>
+                  </td>
+                  <td>
+                    <input type="text" id="SRoom" name="SRoom" placeholder="Numeric">
+                  </td>
+                </tr>
+              </table>
+            </p>
+            <p>
+              <table>
+                <tr>
+                  <td>
+                    <label id="do">Double Room</label>
+                  </td>
+                  <td>
+                    <input type="text" id="DRoom" name="DRoom" placeholder="Numeric">
+                  </td>
+                </tr>
+              </table>
+            </p>
+           
+            <p>
+              <table>
+                <tr>
+                  <td>
+                    <label id="ra">Rating</label>
+                  </td>
+                  <td>
+                    <input type="text" id="Rating" name="Rating" placeholder="*****">
+                  </td>
+                </tr>
+              </table>
+            </p>
+            <p>
+                     <label for="inputComment">Requirement:<sup>*</sup>
+                     </label>
+                    <textarea name="Requirement" id="Requirement" rows="5" cols="30">
+                    </textarea>
+            </p>
+           
+              <input type="submit" id="Hnx" name="Next" value="Next" onclick=" return validate()">
+            
+            
+      </div>
+     </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+   
+   <script type="text/javascript">
+      
+       function validate()
+        {
+            
+            var Hname=document.getElementById('Hname').value;
+           
+            var Night=document.getElementById('Night').value;
+            var SRoom=document.getElementById('SRoom').value;
+            var DRoom=document.getElementById('DRoom').value;
+            
+            var Rating=document.getElementById('Rating').value;
+            var Requirement=document.getElementById('Requirement').value;
+
+           
+            if(Hname.length<1)
+                       {
+              
+              alert("Hotel name Is Required!!");
+              return false;
+            }
+                 
+             if(Night.length<1)
+            {
+                       
+              alert("Enter the Nights you want to stay !!");
+              return false;
+            }
+                  if(SRoom.length<1)
+                       {
+             
+              alert("Room specification Is Required!!");
+              return false;
+            }
+                  if(DRoom.length<1)
+                       {
+              
+              alert("Room specification Is Required!!");
+              return false;
+            }
+                
+             if(Rating.length<1)
+            {
+                      
+              alert("Rating is Required !!");
+              return false;
+            }
+                     if(Rating.length!=5 && Mobile.length!=6)
+            {
+              alert("Enter Numeric value in Rating.!!");
+              return false;
+            }
+            if(isNaN(Mobile))
+            {  
+
+               alert("Only Enter Numeric Values");
+               return false;              
+            }
+             return true;
+        }
+           
+        
+     </script>

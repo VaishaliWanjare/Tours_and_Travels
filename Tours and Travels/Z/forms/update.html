@@ -1,0 +1,295 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+  
+<title>TOURS AND TRAVELS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+  <title>Form</title>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+</head>
+<body>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="z1.html">logout</a></li>
+        </ul>
+       </nav>
+
+
+
+
+<div class="wrapper row4">
+  <main class="hoc container clear">
+  <article>
+    <form name="Form1" action="update.php" method="POST">
+      
+      <div id="logo" class="fl_left">
+        <h1><a href="#">PERSONAL DETAILS</a></h1>
+      </div>
+      
+
+
+    <table>
+     
+      
+      <tr>
+        <td>Username</td>
+        <td><input type="text" name="Username" placeholder="First"></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="Password" name="Password" placeholder="First"></td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td><input type="text" name="Contact" placeholder="Mobile"></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="text" name="Email" placeholder="Enter Emailid"></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input type="text" name="Address" placeholder="delivery Address"></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><input type="text" name="City" placeholder="Your City"></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="Password" name="Password" placeholder="First"></td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <div>
+        <td ><input type="submit" name="submit2" value="Delete"></td>
+        <td ><input type="submit" name="submit3" value="Update"></td>
+        <td ><input type="submit" name="submit5" value="View"></td>
+        </div>
+      </tr>
+    </table>
+
+      
+      
+      
+      <div id="logo" class="fl_left">
+        <h1><a href="z1.html">LOCATION DETAILS</a></h1>
+      </div>
+        
+    <table>
+      <tr>
+        <p>
+              
+                <tr>
+                  <td>
+                    <label id="hn">Contact</label>
+                  </td>
+                  <td>
+                    <input type="text" id="LContact" name="LContact" placeholder="Enter Hotel Name">
+                  </td>
+                </tr>
+              
+            </p>
+        <p>
+        <td>Location Name</td>
+        <td><input type="text" name="Lname" placeholder="Travelling location"></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><input type="text" name="Lcity" placeholder="Travelling City"></td>
+      </tr>
+      <tr>
+        <td>
+          <label id="Lci">Recieve me from</label>
+        </td>
+        <td>
+          <input type="text" id="RecieveFrom" name="RecieveFrom" placeholder="Enter Location">
+        </td>
+        </tr>
+        <tr>
+          <td>
+            <label id="ln">Recieve me By</label>
+          </td>
+          <td>
+            <input type="text" id= "RecieveBy" name="RecieveBy" placeholder="Simple Car/Ac Car">
+          </td>
+        </tr>
+      </table>
+      <table>
+      <tr>
+        <div>
+        <td ><input type="submit" name="submit71" value="Delete"></td>
+        <td ><input type="submit" name="submit72" value="Update"></td>
+        <td ><input type="submit" name="submit73" value="View"></td>
+        </div>
+      </tr>
+    </table>
+
+
+      <div id="logo" class="fl_left">
+        <h1><a href="z1.html">HOTEL DETAILS</a></h1>
+      </div>
+      <table>
+         <p>
+              
+                <tr>
+                  <td>
+                    <label id="hn">Contact</label>
+                  </td>
+                  <td>
+                    <input type="text" id="HContact" name="HContact" placeholder="Enter Hotel Name">
+                  </td>
+                </tr>
+              
+            </p>
+        <p>
+              
+                <tr>
+                  <td>
+                    <label id="hn">Hotel Name</label>
+                  </td>
+                  <td>
+                    <input type="text" id="Hname" name="Hname" placeholder="Enter Hotel Name">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+            
+              <tr>
+                <td>
+                  <div class="clear"></div>
+                  <strong>Check-in</strong>
+                  <label class="tmDatepicker">
+                </td>
+                <td>
+                  <input type="text" name="Checkin" placeHolder='10/05/2018' data-constraints="@NotEmpty @Required @Date">
+                  </label>
+                </td>
+              </tr>
+            
+          </p>
+          <p>
+            
+              <tr>
+                <td>
+                  <div class="clear"></div>
+                  <strong>Check-out</strong>
+                  <label class="tmDatepicker">
+                </td>
+                <td>
+                  <input type="text" name="Checkout" placeHolder='20/05/2018' data-constraints="@NotEmpty @Required @Date">
+                  </label>
+                </td>
+              </tr>
+            
+          </p>
+
+            <p>
+              
+                <tr>
+                  <td>
+                    <div class="clear"></div>
+                    <div class="fl1 fl2">
+                    <em>Adults</em>
+                      <select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                      <option>1</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </td>
+                  <td>
+                    <div class="clear"></div>
+                    <em>Rooms</em>
+                    <select name="Room" value="Room" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                      <option>1</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                
+                  <div class="fl1 fl2">
+                    <em>Children</em>
+                    <select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                      <option>0</option>
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+           
+          </p>
+            <p>
+              
+                <tr>
+                  <td>
+                    <label id="si">Single Room</label>
+                  </td>
+                  <td>
+                    <input type="text" id="SRoom" name="SRoom" placeholder="Numeric">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+             
+                <tr>
+                  <td>
+                    <label id="do">Double Room</label>
+                  </td>
+                  <td>
+                    <input type="text" id="DRoom" name="DRoom" placeholder="Numeric">
+                  </td>
+                </tr>
+              
+            </p>
+            <p>
+             
+                <tr>
+                  <td>
+                    <label id="re">Requirement</label>
+                  </td>
+                  <td>
+                    <input type="text" id="Requirement" name="Requirement" placeholder="*">
+                  </td>
+                </tr>
+              
+            </p>
+          </table>
+
+
+
+
+
+    <table>
+      <tr>
+        <div>
+        <td ><input type="submit" name="submit61" value="Delete"></td>
+        <td ><input type="submit" name="submit62" value="Update"></td>
+        <td ><input type="submit" name="submit63" value="View"></td>
+        </div>
+      </tr>
+    </table>
+
+
+      
+   </form>
+  </article>
+</main>
+</div>
+
+
+
+
+
+</html>

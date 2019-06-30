@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title> Login for BookStore </title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script type="text/javascript">
+      
+       function validate()
+        {
+      
+            var Username=document.getElementById('Username').value;
+            var Name=document.getElementById('Name').value;
+            var Mobile=document.getElementById('Mobile').value;
+            var Password=document.getElementById('Password').value;
+            var ConfirmPassword=document.getElementById('ConfirmPassword').value;
+            
+            if(Username.length<1)
+            {
+              alert("Username Is Required!!");
+              return false;
+            }
+            if(Name.length<1)
+            {
+                alert("Name Is Required!!");
+                return false;
+            }
+            if(Mobile.length<1)
+            {
+                alert("Mobile Is Required!!");
+                return false;
+            }
+            if(Password.length<1)
+            {
+              alert("Password Is Required!!");
+              return false;
+            }
+            if(ConfirmPassword.length<1)
+            {
+              alert("ConfirmPassword Is Required!!");
+              return false;
+            }
+            if(Password!=ConfirmPassword)
+            {
+                alert("Passwords should match!!");
+                return false;             
+            }
+            if(Mobile.length!=10 && Mobile.length!=11)
+            {
+              alert("Enter Numeric value in Mobile no.!!");
+              return false;
+            }
+            if(isNaN(Mobile))
+            {
+               alert("Only Enter Numeric Values");
+               return false;              
+            }
+             return true;
+        }
+        
+     </script>
+
+</head>
+
+    <body>
+     <form action="signinphp.php" method="get">
+      <div class="login-box">
+        <img src="avatar.png" class="avatar">
+                    <h1 id="us">User Sign in Page</h1>
+            <form action="login.php" method="post">
+            <p>
+            <label id="un">Username</label>
+            <input type="text" id= "Username" name="Username" placeholder="Enter Username or Email">
+            </p>
+            <p>
+            <label id="n">Name</label>
+            <input type="text" id="Name" name="Name" placeholder="Enter Name">
+            </p>
+            <p>
+            <label id="m">Mobile</label>
+            <input type="text" id="Mobile" name="Mobile" placeholder="Enter Mobile">
+            </p>
+            <p>
+            <label id="p">Password</label>
+            <input type="password" id="Password" name="Password" placeholder="Enter Password">
+            </p>
+            <p>
+            <label id="cp">Confirm Password</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password">
+            </p>
+            <input type="submit" id="sg" name="signin" value="Sign in" onclick=" return validate()">
+            
+            
+      </div>
+     </form>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<title>TOURS AND TRAVELS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+    <title> Login Form </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+
+</head>
+
+    <body>
+          <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+     
+      <div id="logo" class="fl_left">
+        <h1><a href="z1.html">TRAVELERS POINT</a></h1>
+      </div>
+      
+ 
+    </header>
+  </div>
+     
+      <div class="login-box" align="center">
+        <form action="logiin123.php" method="post">
+       
+                    <h1 >Login Form</h1>
+            
+            <p>
+            <label>Username</label>
+            <input type="text" id= "Username" name="Username" placeholder="Enter Username">
+            </p>
+            <p>
+            <label >Password</label>
+            <input type="password" id="Password" name="Password" placeholder="Enter Password">
+            </p>
+            <input type="submit"  id="lg" name="login" value="Login" onclick="return validate()">
+            <a id="fp" align="center" href="#"></a>
+            
+            
+      </div>
+     </form>
+    </body>
+
+<script type="text/javascript">
+      
+      function validate()
+     {
+      
+            var Username=document.getElementById('Username').value;
+            var Password=document.getElementById('Password').value;
+           
+            if(Username.length<1)
+            {
+              alert("Username Is Required!!");
+              return false;
+            }
+           
+            if(Password.length<1)
+            {
+              alert("Password Is Required!!");
+              return false;
+            }
+            
+      
+     }
+     function checkname()
+     {
+
+             var Username=document.getElementById('Username').value;
+             if(Username.length<1)
+             {
+                document.getElementById('spn').innerHTML="*";
+                document.getElementById('spn').style.color="red";
+              
+             }  
+             else
+             {
+               document.getElementById('spn').innerHTML="";
+             }      
+     }
+    </script>
+
+</html>

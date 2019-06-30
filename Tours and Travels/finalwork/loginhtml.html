@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LOGIN FORM</title>
+<link ref="Stylesheet" tyo="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="frm">
+		<form action="loginphp.php"  method="POST">
+			<p>
+				<label>Username:</label>
+				<input type ="text" id="Username" name="Username" placeholder="Enter Username"/>
+			</p>
+			<p>
+				<label>Password:</label>
+				<input type ="Password" id="Password" name="Password" placeholder="Enter Password"/>
+			</p>
+			<p>
+				<label>Login:</label>
+				<input type ="submit" id="btn" name="login" onclick=" return validate()"/>
+			</p>
+		</form>
+	</div>		
+</body>
+
+
+</html>
+
+<script type="text/javascript">
+      
+       function validate()
+        {
+      
+            var Username=document.getElementById('Username').value;
+            var Password=document.getElementById('Password').value;
+           
+
+            if(Username.length<1)
+            {
+              Username.style.border="1px solid red";
+              alert("Username Is Required!!");
+              return false;
+            }
+
+            if(Password.length<1)
+            {
+              
+              alert("Password Is Required!!");
+              return false;
+            }
+
+        }
+        
+     </script>

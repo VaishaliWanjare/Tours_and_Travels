@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>  <link href="/htdocs/finalwork/locationcss.css" rel="stylesheet" type="text/css" />
+  </head>
+    <body>
+     <form id="locform" action="locationphp.php" method="get">
+         <div class="fl_right">
+        <ul class="nospace">
+          
+            <li><i class="fa fa-envelope-o"></i><a href="logout.php">logout</a></li></li>
+           
+        </ul>
+      </div>
+      <div class="login-box">
+        
+            <h1 id="tr">Traveling Location</h1>
+
+             
+              <p>
+                <table>
+                  <tr>
+                    <td>
+                      <label id="ln">Location Name</label>
+                    </td>
+                    <td>
+                      <input type="text" id= "Lname" name="Lname" placeholder="Enter Location name">
+                    </td>
+                  </tr>
+                </table>
+              </p>
+              <p>
+                <table>
+                  <tr>
+                    <td>
+                      <label id="Lci">City</label>
+                    </td>
+                    <td>
+                      <input type="text" id="Lcity" name="Lcity" placeholder="Enter City">
+                    </td>
+                  </tr>
+                </table>
+              </p>
+              <p>
+             
+           <a href="hotelhtml.html">
+              <input type="submit" id="Lnx" name="Next" value="Next" onclick=" return validate()">
+              </a>
+            </p>
+            
+      </div>
+     </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+   
+   <script type="text/javascript">
+      
+       function validate()
+        {
+            
+            var Lname=document.getElementById('Lname').value;
+            var Lcity=document.getElementById('Lcity').value;
+           
+           
+            if(Lname.length<1)
+            {
+              
+              alert("Location name Is Required!!");
+              return false;
+            }
+           
+             if(Lcity.length<1)
+            {
+                     
+              alert("City Is Required!!");
+              return false;
+            }
+           
+        
+     </script>
